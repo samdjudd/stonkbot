@@ -1,0 +1,2 @@
+# stonkbot
+Discord Bot
