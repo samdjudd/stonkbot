@@ -13,13 +13,10 @@ class MyClient(discord.Client):
             return
 
         if message.content.startswith('$'):
-            if 
             to_add = int(re.sub("\$", "", message.content, 1))
-            
-            print(to_add)
             gainz = update_profit(to_add)
             msg = 'Total profits: ${}'.format(gainz)
-            await client.send_message(message.channel, msg)
+            await message.channel.send(msg)
             
 def update_profit(to_add, dynamodb=None):
     if not dynamodb:
@@ -28,7 +25,6 @@ def update_profit(to_add, dynamodb=None):
     table = dynamodb.Table('ProfitCounter')
     response = table.get_item(Key={"Name": "Profits"})
     old_number = (response['Item']['Money'])
-    print(old_number)
     new_number = old_number + to_add
     response2 = table.update_item(
             Key={"Name": "Profits"},
@@ -41,5 +37,6 @@ def update_profit(to_add, dynamodb=None):
     return new_number
 
 
-client = MyClient()
-client.run('NzE4NTI2Mjg0MDgyMzE1MzU0.XtqKfQ.a4sp_KAiam0mi6tnTTP3unf5wKI')
+if __name__ == "__main__":
+    client = MyClient()
+    client.run('NzE4NTI2Mjg0MDgyMzE1MzU0.XtqKfQ.a4sp_KAiam0mi6tnTTP3unf5wKI')
