@@ -1,8 +1,0 @@
-{
-    "name": "StonkBot",
-    "version": "1.0.0",
-    "description": "Profit Counter",
-    "main": "StonkBot.js",
-    "author": "Sam Judd"
-    "dependencies": {}
-}
