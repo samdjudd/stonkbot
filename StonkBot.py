@@ -1,8 +1,8 @@
-#python3.6.9
 import discord
 import boto3
 import json
 import re
+
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -36,7 +36,8 @@ def update_profit(to_add, dynamodb=None):
     )
     return new_number
 
-
 if __name__ == "__main__":
     client = MyClient()
-    client.run('NzE4NTI2Mjg0MDgyMzE1MzU0.XtqKfQ.a4sp_KAiam0mi6tnTTP3unf5wKI')
+    # prd bot -> client.run('NzE4NTI2Mjg0MDgyMzE1MzU0.XtqKfQ.a4sp_KAiam0mi6tnTTP3unf5wKI')
+    # dev bot
+    client.run('NzE4NjI0ODk3NDg3NjAxNzM2.Xtrl1A.bUXZaHQCT4hOcEx788-Pgue8TUM')
