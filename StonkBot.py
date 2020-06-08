@@ -1,4 +1,3 @@
-#python3.6.9
 import discord
 import boto3
 import json
