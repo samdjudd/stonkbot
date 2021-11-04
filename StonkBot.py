@@ -41,6 +41,6 @@ def update_profit(to_add, dynamodb=None):
 
 if __name__ == "__main__":
     client = MyClient()
-    # prd bot -> client.run('NzE4NTI2Mjg0MDgyMzE1MzU0.XtqKfQ.a4sp_KAiam0mi6tnTTP3unf5wKI')
+    # prd bot -> client.run($PRD_KEY)
     # dev bot
-    client.run('NzE4NjI0ODk3NDg3NjAxNzM2.Xtrl1A.bUXZaHQCT4hOcEx788-Pgue8TUM')
+    client.run($DEV_KEY)
